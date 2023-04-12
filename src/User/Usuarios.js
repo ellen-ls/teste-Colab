@@ -7,11 +7,20 @@ const User = ()=>{
     const [listaUsuarios, setListaUsuarios] = useState([])
     
     
-    useEffect(()=>{
-        axios.get('https://randomuser.me/api/?results=50')
+    const user = ()=>{
+        axios.get('https://randomuser.me/api/')
         .then((response)=>{
             setListaUsuarios(response.data.results)
         })
+    }
+
+    const onClick = () =>{
+        user()
+        setListaUsuarios()
+    }
+
+    useEffect(()=>{
+        onClick()
     },[])
 
     console.log(listaUsuarios)
@@ -21,9 +30,10 @@ return(
         <h1>Usuarios</h1>
 
         
-        {listaUsuarios.map((lista, index)=>{
+        {listaUsuarios && listaUsuarios.map((lista, index)=>{
             return <div key={index}>
                 <img src={lista.picture.large}></img>
+                <button value={listaUsuarios} onClick={onClick}>New</button>
                 <div>
                     <h4>Username: {lista.login.username}</h4>
                     <h4>Name: {lista.name.first} {lista.name.last}, {lista.dob.age}</h4>
