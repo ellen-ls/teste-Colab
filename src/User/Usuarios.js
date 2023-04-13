@@ -2,6 +2,8 @@ import axios from "axios"
 import { useEffect } from "react"
 import { useState } from "react"
 
+
+
 const User = ()=>{
 
     const [listaUsuarios, setListaUsuarios] = useState([])
@@ -38,6 +40,7 @@ return(
                     <h4>Username: {lista.login.username}</h4>
                     <h4>Name: {lista.name.first} {lista.name.last}, {lista.dob.age}</h4>
                     <h4>Email: {lista.email}</h4>
+                    
                     
                 </div>
             </div>
