@@ -61,7 +61,7 @@ const User = ()=>{
 
         return<div>
             <p id="user_titulo">{frases[activeLink]}</p>
-            <h3 id="user_valor">{info[activeLink]}</h3>
+            <h3>{info[activeLink]}</h3>
             </div>
 
        
