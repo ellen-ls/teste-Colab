@@ -39,14 +39,32 @@ const User = ()=>{
 
     const GeradorFrases = ({user}) =>{
         const frases = [
-            `Hi my name is ${user.name.first} ${user.name.last}`,
-            `My email address is ${user.email}`,
-            `My birthday is ${user.dob.date.slice(0,10)} `,
-            `My address is ${user.location.street.name}, ${user.location.street.number}`,
-            `My phone number is ${user.phone}`,
-            `My password is ${user.login.password}`
+            `Hi, my name is `,
+            `My email address is `,
+            `My birthday is `,
+            `My address is `,
+            `My phone number is `,
+            `My password is `
         ]
-        return<h2>{frases[activeLink]}</h2>
+        const info = [
+            `${user.name.first} ${user.name.last}`,
+            `${user.email}`,
+            `${user.dob.date.slice(0,10)} `,
+            `${user.location.street.name}, ${user.location.street.number}`,
+            `${user.phone}`,
+            `${user.login.password}`
+
+    
+
+            
+        ]
+
+        return<div>
+            <p id="user_titulo">{frases[activeLink]}</p>
+            <h3 id="user_valor">{info[activeLink]}</h3>
+            </div>
+
+       
     }
 
     const activeLinkHandle = (index)=>{
@@ -55,13 +73,12 @@ const User = ()=>{
     }
 
 return(
-    <div>
-        <h1>Usuarios</h1>
-
-        
+    <div className="card">
+        <div className="detalhes">
+               
         {listaUsuarios && listaUsuarios.map((lista, index)=>{
             return <div key={index}>
-                <img src={lista.picture.large}></img>
+                <img className="user_foto" id="user_foto" src={lista.picture.large}></img>
                 <button value={listaUsuarios} onClick={onClick}>New</button>
                 <GeradorFrases user={lista}/>            
                 <div className="app--icons">
@@ -72,12 +89,12 @@ return(
                         )
                     })}
                                        
-                    
+                                       
                 </div>
             </div>
         })}
     </div>
-
+</div>  
 
 )
 }

@@ -13,7 +13,7 @@
     height: 100vh;
     overflow: hidden;
     background-color: rgb(184, 150, 216);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
   button{
@@ -26,13 +26,61 @@
     cursor: pointer;
   }
 
-  img{
+  .card{
+    position: relative;
+    padding: 20px 0;
+    width: 80%;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(0,0,0,.5);
+    overflow: hidden;
+    text-align: center;
+    z-index: 5;
+  }
+
+  .card .user_foto{
+    position: relative;
+    background: #fff;
+    padding: 3px;
     width: 150px;
     height: 150px;
-    margin:10px 0;
+    margin-bottom:30px;;
     border-radius: 50%;
-    border: 3px solid white;
+    border: 1px solid rgba(0,0,0,.25);
 
+  }
+
+  .card .detalhes button{
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    padding: 10px 15px;
+    color: #fff;
+    background: rgba(0,0,0,.75);
+    border-radius: 3px;
+    text-decoration: none;
+    opacity: 0;
+    display: block;
+    transform: translateX(-50%);
+    transition: all .25s ease-in-out;
+  }
+
+  .card .detalhes button:hover{
+    opacity: 0.9;
+  }
+
+   .card #user_titulo{
+    color: #302f2f;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
   }
 
   .app-user{
@@ -52,6 +100,7 @@
   .app--icons .fas{
     margin: 0 30px;
     transition: all 0.2s ease-in-out;
+    
 
   }
 
