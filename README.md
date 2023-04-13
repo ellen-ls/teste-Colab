@@ -11,6 +11,10 @@
 ### API utilizada foi:
 https://randomuser.me/
 
+### Deploy :
+chubby-hat.surge.sh
+
+
 ### Para iniciar use:
 
 ``` npm run start```
