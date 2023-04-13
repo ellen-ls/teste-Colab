@@ -43,14 +43,20 @@
     justify-content: center;
     flex-direction: column;
   }
+  .app-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-  .app-icons.fas{
+  .app--icons .fas{
     margin: 0 30px;
     transition: all 0.2s ease-in-out;
 
   }
 
-  .app-icons.fas:hover{
+  .app--icons .fas:hover{
     transform: scale(1.1);
     cursor: pointer;
+    color: rgb(157, 78, 230);
   }
