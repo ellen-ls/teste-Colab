@@ -12,7 +12,7 @@
 https://randomuser.me/
 
 ### Deploy :
-chubby-hat.surge.sh
+https://chubby-hat.surge.sh/
 
 
 ### Para iniciar use:
